@@ -2,8 +2,8 @@
 
 <p>Mail Me: <a href="mailto:kyan@kbral.com">kyan@kbradl.com</a></p>
 
-<img src="https://github.com/bradley-kyan/github-stats/blob/master/generated/overview.svg" alt="Code Overview"></img>
-<img src="https://github.com/bradley-kyan/github-stats/blob/master/generated/languages.svg" alt="Languages Overview"></img>
+<img src="https://github.com/bradley-kyan/github-stats/blob/master/generated/overview.svg#gh-dark-mode-only" alt="Code Overview"></img>
+<img src="https://github.com/bradley-kyan/github-stats/blob/master/generated/languages.svg#gh-dark-mode-only" alt="Languages Overview"></img>
 
 
 
