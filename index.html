@@ -1,24 +1,27 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Kyan Bradley</title>
+<title>Kyan Bradley - Portfolio</title>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="">
-<meta name="keywords" content="">
-<meta name="author" content="© 2021 Milky.">
-<link rel="icon" type="image/png" href="assets/coneTopAsset 3.svg">
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script> 
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script> 
+<meta name="description" content="Portfolio page for Kyan Bradley">
+<meta name="keywords" content="Kyan Bradley, kyan, kbradl, profile, portfolio">
+<meta name="author" content="Kyan Bradley 2023">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 <script src="script/anime-3.2.1/anime.min.js"></script> 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
 <style>
-
 html {
     scroll-behavior: smooth;
     overflow: overlay;
 }
+:root {
+	--height: 0;
+	--width: 0;
+}
+
 /* Scrollbar */     
 ::-webkit-scrollbar {
     width: var(--scrollbar);
@@ -33,52 +36,23 @@ html {
 ::-webkit-scrollbar-thumb:hover {
     background: #515151;
 }
-/*--------------*/ 
-/* Custom Root Values */
-    
-:root {
---rotation: 0deg;
---height;
---width;
-}    
-/* Loading Containers */    
-#loadingDiv {
-    height: var(--height);
-    width: 100vw;
-    postion: absolute;
-    z-index: 100;
-    top: 0;
-    overflow: hidden;
-    background-color: #F2B79F;
-    display: flex;
-    justify-content: center;
-}
-.creamContainer {
-    align-self: center;
-    z-index: 500;
-    padding-top: calc(var(--height)/3.5);
-}
 /*--------------*/
 /* Navbar */
 #navContainer {
     background-color: #FFFFFF;
-    z-index: 4;
+    z-index: 100;
     display: inherit;
     position: fixed;
     right: 0;
-    top: 100px;
-    height: calc(var(--height)/1.2);
     overflow: scroll;
     border-bottom-style: solid;
     border-left-style: solid;
-    border-bottom-color: #F2B79F;
-    border-left-color: #F2B79F;
+    border-bottom-color: #494960;
+    border-left-color: #494960;
 }
-#navbarImg {
-    width: 90px;
-}    
 .nav-link {
     color: #6095CF;
+	font-size: 40px
 }
 /* Responsive Navbar sizing */    
 @media(max-height: 500px) {
@@ -152,27 +126,14 @@ html {
     background-color: rgba(255,255,255,0.8);
 }
 .main {
-    padding-top: 100px;
+	padding-top: 55px;
+	position: relative;
+	z-index: 10;
+	background-color: white;
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
 }
-/*--------------*/
-/* Background image => Rotating image */    
-#background {
-    overflow: hidden;
-    position: absolute;
-    z-index: -100;
-}
-#background:before {
-    content: "";
-    width: 200%;
-    height: 200%;
-    top: -50%;
-    left: -50%;
-    background-image: url("assets/sprinkle2.svg");
-    background-repeat: repeat;
-    background-size: 2.5%;
-    position: fixed;
-    transform: rotate(var(--rotation));
-} 
 /*--------------*/ 
 /* Mavigation Items trnasformations */    
 .nav-trans {
@@ -184,35 +145,7 @@ html {
 .nav-trans:not(:hover) {
     transform: translateX(0px);
 }
-/*--------------*/
-/* Content Transitions for JS scripts*/    
-.trans {
-    transition: all .25s;
-}
-.trans-2 {
-    transition: all .25s;
-}
-.trans-3 {
-    transition: all .25s;
-}
-.trans-4 {
-    transition: all .25s;
-}
-.trans-grow {
-    transition: all .25s;
-}
-.trans-raise-grow {
-    transition: all .25s;
-}
-/*--------------*/
-/* Loading screen spinner screen position */    
-.spinner-pos {
-    position: absolute;
-    bottom: 10%;
-    left: 0;
-    right: 0;
-    margin: auto;
-}
+
 /*--------------*/
 /* Content scroll-in containers */    
 .parent {
@@ -224,12 +157,12 @@ html {
 /*--------------*/ 
 /* Buttons */    
 .btn-secondary {
-    background-color: #F2B79F;
-    border-color: #F4937D
+    background-color: #494960;
+    border-color: #494960
 }
 .btn-secondary:hover {
-    background-color: #FD6B61;
-    border-color: #F4937D
+    background-color: #494960;
+    border-color: #494960
 }
 .button-fixed {
     bottom: 0;
@@ -243,250 +176,364 @@ html {
     color: #FFFFFF;
 }
 .hyperlink-top:hover {
-    color: black;
+	color: black;
+}
+img, h2{
+	transition: all .1s;
+}
+img:hover{
+	transition: all .3s;
+	transform: scale(1.02);
 }
 </style>
 </head>
-<body>
-<div id="background"> 
+<body>	
+	<script type = "text/javascript" >
+	$(document).ready(function() {
+		
+		/* Sets the placement of the first 3 containers + hidden scroll-in navbar off screen & sets global css variables */
 
-<script type = "text/javascript" >
+		document.getElementById("navContainer").style.transform = "translateX(" + $(window).width() + "px)";
+		document.documentElement.style.setProperty('--height', $(window).height() + 'px');
+		document.documentElement.style.setProperty('--width', $(window).width() + 'px');
 
-$(document).ready(function() {
+		/* Simple hover animation on navbar-brand */
+		$('.navbar-brand').hover(function() {
 
-	/* Sets the placement of the first 3 containers + hidden scroll-in navbar off screen & sets global css variables */
+			anime({
+				targets: '.navbar-brand',
+				scaleX: 1.1,
+				scaleY: 1.1,
+				easing: 'spring(1, 90, 5 ,0)',
+				duration: 100
+			});
+		})
 
-	document.getElementById("navContainer").style.transform = "translateX(" + $(window).width() + "px)";
-	document.getElementById("containerFlowIn").style.transform = "translateX(" + $(window).width() + "px)";
-	document.getElementById("containerFlowIn2").style.transform = "translateX(" + $(window).width() + "px)";
-	document.getElementById("containerFlowIn3").style.transform = "translateX(" + $(window).width() + "px)";
-	document.documentElement.style.setProperty('--height', $(window).height() + 'px');
-	document.documentElement.style.setProperty('--width', $(window).width() + 'px');
+		$('.navbar-brand').mouseleave(function() {
+			anime({
+				targets: '.navbar-brand',
+				scaleX: 1,
+				scaleY: 1,
+				easing: 'spring(1, 90, 5 ,0)',
+				duration: 100
+			});
+		})
 
-	/* Used to instantly set the position of the scroll-in body containers when a linked button is pressed. This allows the content to be visible when the user clicks on the button, and also prevents browser scroll errors */
+		/* Function used to check if the collapsing navbar is collapsed. If collapsed it will open, else will close. Bastardisation of original intended function which would have closed navbar if the user clicked outside of the body, now closes when the user clicks on the navbar-logo */
+		var activeButton = 1;
 
-	$('.btn-detail').click(function() {
-		$('.scroll-on-view').css('transition', 'all 0s');
-		$('#002').css('transform', 'translateX(0px)');
-		$('#004').css('transform', 'translateX(0px)');
-		$('#006').css('transform', 'translateX(0px)');
-		$('#008').css('transform', 'translateX(0px)');
-		$('#010').css('transform', 'translateX(0px)');
-		$('#012').css('transform', 'translateX(0px)');
-		$('#013').css('transform', 'translateX(0px)');
-		$('#014').css('transform', 'translateX(0px)');
-		$('#015').css('transform', 'translateX(0px)');
-		$('#016').css('transform', 'translateX(0px)');
-	});
-	$('.nav-item').click(function() {
-		$('.scroll-on-view').css('transition', 'all 0s');
-		$('#002').css('transform', 'translateX(0px)');
-		$('#004').css('transform', 'translateX(0px)');
-		$('#006').css('transform', 'translateX(0px)');
-		$('#008').css('transform', 'translateX(0px)');
-		$('#010').css('transform', 'translateX(0px)');
-		$('#012').css('transform', 'translateX(0px)');
-		$('#013').css('transform', 'translateX(0px)');
-		$('#014').css('transform', 'translateX(0px)');
-		$('#015').css('transform', 'translateX(0px)');
-		$('#016').css('transform', 'translateX(0px)');
-	});
+		$("#navbarButton").on( "click", function() {
+		
+			console.log("It is working");
 
-	/* Simple hover animation on navbar-brand */
-
-	$('.navbar-brand').hover(function() {
-
-		anime({
-			targets: '#navbarImg',
-			scaleX: 1.1,
-			scaleY: 1.1,
-			easing: 'spring(1, 90, 5 ,0)',
-			duration: 100
-		});
+			navToggle(activeButton);
+			if (activeButton == 1) {
+				activeButton = 0;
+			}
+			else {
+				activeButton = 1;
+			}
+		})
+		$('.navbar-brand').on( "click",function() {
+			if (state == 0) {
+				navToggle(0);
+				activeButton = 1;
+			}
+		})
+		$('.main').on( "click", function() {
+			if (state == 0) {
+				navToggle(0);
+				activeButton = 1;
+			}
+		})
 	})
 
-	$('.navbar-brand').mouseleave(function() {
-		anime({
-			targets: '#navbarImg',
-			scaleX: 1,
-			scaleY: 1,
-			easing: 'spring(1, 90, 5 ,0)',
-			duration: 100
-		});
-	})
+	/* Opens/closes the navbar according to the input parameter. Controls animations regarding close/open */
+	function navToggle(toggle) {
+		if (state == 0 && toggle == 0) { // Close container
 
-	/* Function used to check if the collapsing navbar is collapsed. If collapsed it will open, else will close. Bastardisation of original intended function which would have closed navbar if the user clicked outside of the body, now closes when the user clicks on the navbar-logo */
-
-	$("#navbarButton").click(function() {
-	
-				alert("It is working");
-
-		navToggle(activeButton);
-		if (activeButton == 1) {
-			activeButton = 0;
+			anime({
+				targets: '#navContainer',
+				translateX: $(window).width() + 25, // Transforms offscreen
+				easing: 'spring(1, 90, 80, 0)',
+			});
+			anime({ // Changes color of the navbar
+				targets: '#changeColor',
+				background: '#FFFFFF',
+				easing: 'easeInOutQuad',
+			});
+			anime({ // Changes color of colapsed navbar
+				targets: '#navContainer',
+				background: '#FFFFFF',
+				easing: 'easeInOutQuad',
+			});
+			state = 1;
+			toggle = 0;
 		}
-		else {
-			activeButton = 1;
+		else if (state == 1 && toggle == 1) { // Open container
+
+			anime({
+				targets: '#navContainer', // Transforms onscreen
+				translateX: 0,
+				easing: 'spring(1, 90, 80, 0)'
+			});
+			state = 0;
+			toggle = 1;
 		}
-	})
-	$('#navbarImg').click(function() {
-		if (state == 0) {
-			navToggle(0);
-			activeButton = 1;
-		}
-	})
-})
-
-var activeButton = 1;
-
-/* Opens/closes the navbar according to the input parameter. Controls animations regarding close/open */
-
-function navToggle(toggle) {
-
-	if (state == 0 && toggle == 0) { // Close container
-
-		anime({
-			targets: '#navContainer',
-			translateX: $(window).width() + 25, // Transforms offscreen
-			easing: 'spring(1, 90, 80, 0)',
-		});
-		anime({ // Changes color of the navbar
-			targets: '#changeColor',
-			background: '#FFFFFF',
-			easing: 'easeInOutQuad',
-		});
-		anime({ // Changes color of colapsed navbar
-			targets: '#navContainer',
-			background: '#FFFFFF',
-			easing: 'easeInOutQuad',
-		});
-		state = 1;
-		toggle = 0;
-	}
-	else if (state == 1 && toggle == 1) { // Open container
-
-		anime({
-			targets: '#navContainer', // Transforms onscreen
-			translateX: 0,
-			easing: 'spring(1, 90, 80, 0)'
-		});
-		anime({ // Changes color of the navbar
-			targets: '#changeColor',
-			background: '#F9E3D9',
-			easing: 'easeInOutQuad',
-		});
-		anime({ // Changes color of colapsed navbar
-			targets: '#navContainer',
-			background: '#F9E3D9',
-			easing: 'easeInOutQuad',
-		});
-		state = 0;
-		toggle = 1;
-	}
-}
-var currentRotation = 0;
-var direction = 1;
-
-/* Function used to set the width of the scroll bar in order to creation show/hide animation */             
-
-var scrollState = 0; // Used to make sure that only one instance of scrollbar() is run on scroll.
-function scrollbar() {
-
-	var myObject = {
-		prop1: 0,
-		prop2: 7
 	}
 
-	scrollState = 1;
+	/* Function used to set the width of the scroll bar in order to creation show/hide animation */             
+	var scrollState = 0; // Used to make sure that only one instance of scrollbar() is run on scroll.
+	function scrollbar() {
 
-	anime({
-		targets: myObject,
-		prop1: 7,
-		easing: 'linear',
-		round: 1,
-		duration: 500,
-		update: function() {
-			document.documentElement.style.setProperty('--scrollbar', myObject.prop1 + 'px'); // Sets --scrollbar prop linearly => 0-7px wide
-		},
-	});
+		var myObject = {
+			prop1: 0,
+			prop2: 7
+		}
 
-	setTimeout(function() { // Hide scrollbar after 7 seconds.
+		scrollState = 1;
+
 		anime({
 			targets: myObject,
-			prop2: 0,
+			prop1: 7,
 			easing: 'linear',
 			round: 1,
 			duration: 500,
 			update: function() {
-				document.documentElement.style.setProperty('--scrollbar', myObject.prop2 + 'px'); // Sets --scrollbar prop linearly => 7-0px wide
+				document.documentElement.style.setProperty('--scrollbar', myObject.prop1 + 'px'); // Sets --scrollbar prop linearly => 0-7px wide
 			},
-			complete: function() {
-				scrollState = 0; // Tells onscroll function that function is ready to be run again
-			}
 		});
-	}, 7000)
-}
-/* Makes sure if navbar is collapsed, will remain offscreen when browser/window is resized */
 
-$(window).resize(function() {
-	if (state == 1) {
-		style = "background-color: #F2B79F"
-		anime({
-			targets: '#navContainer',
-			translateX: $(window).width() + 25,
-			easing: 'linear',
-		});
+		setTimeout(function() { // Hide scrollbar after 7 seconds.
+			anime({
+				targets: myObject,
+				prop2: 0,
+				easing: 'linear',
+				round: 1,
+				duration: 500,
+				update: function() {
+					document.documentElement.style.setProperty('--scrollbar', myObject.prop2 + 'px'); // Sets --scrollbar prop linearly => 7-0px wide
+				},
+				complete: function() {
+					scrollState = 0; // Tells onscroll function that function is ready to be run again
+				}
+			});
+		}, 7000)
 	}
+	/* Makes sure if navbar is collapsed, will remain offscreen when browser/window is resized */
+	var state = 1;
+	$(window).resize(function() {
+		if (state == 1) {
+			style = "background-color: #494960"
+			anime({
+				targets: '#navContainer',
+				translateX: $(window).width() + 25,
+				easing: 'linear',
+			});
+		}
 
-	document.documentElement.style.setProperty('--width', $(window).width() + 'px');
-	document.documentElement.style.setProperty('--height', $(window).height() + 'px');
+		document.documentElement.style.setProperty('--width', $(window).width() + 'px');
+		document.documentElement.style.setProperty('--height', $(window).height() + 'px');
 
-    /* Makes Scrollbar always show if the device is smaller that a certain size => for mobile devices / if window is resized */
-    
-	if ($(window).height() < 600 || $(window).width() < 400) {
-		document.documentElement.style.setProperty('--scrollbar', 7 + 'px');
-		scrollState = 1;
-	}
-	else {
-		document.documentElement.style.setProperty('--scrollbar', 0 + 'px');
-		scrollState = 0;
-	}
+		/* Makes Scrollbar always show if the device is smaller that a certain size => for mobile devices / if window is resized */
+		
+		if ($(window).height() < 600 || $(window).width() < 400) {
+			document.documentElement.style.setProperty('--scrollbar', 7 + 'px');
+			scrollState = 1;
+		}
+		else {
+			document.documentElement.style.setProperty('--scrollbar', 0 + 'px');
+			scrollState = 0;
+		}
 
-}); 
-</script>
-    <nav class="navbar navbar-light fixed-top" style="background-color: #FFFFFF; border-bottom-style: solid; border-bottom-color: #F2B79F;" id="changeColor"> <a class="navbar-brand" href="#"> <img id="navbarImg" src="assets/logo.svg" alt="Milky Logo"></a>
-        <button class="navbar-toggler bg-light" type="button" id="navbarButton"> <span class="navbar-toggler-icon"></span> </button>
-        <div id="navContainer">
-            <div class="container-fluid"  style="position: flex; align-content: flex-start" id="collapsibleNavbar">
-                <ul class="navbar-nav mr-auto">
-                    <li class="nav-item nav-trans"> <a class="nav-link lead" href="index.html#containerFlowIn2" style="color: #200F87; font-size: 45px">Our Flavours</a> </li>
-                    <li class="lead nav-item nav-trans"> <a class="nav-link" href="index.html#001">Punky Road</a> </li>
-                    <li class="lead nav-item nav-trans"> <a class="nav-link" href="index.html#003">Chocolate Chip Off the Block</a> </li>
-                    <li class="lead nav-item nav-trans"> <a class="nav-link" href="index.html#005">Orange Orange</a> </li>
-                    <li class="lead nav-item nav-trans"> <a class="nav-link" href="index.html#007">Masterful Mellon</a> </li>
-                    <li class="lead nav-item nav-trans"> <a class="nav-link" href="index.html#009">Care'amel Dream</a> </li>
-                    <li class="lead nav-item nav-trans"> <a class="nav-link" href="index.html#About" style="color: #200F87; font-size: 35px">About Us</a></li>
-                    <li><br>
-                        <p class="lead"><span style="border-bottom: 1px solid #505356">Contact us to order!</span></p>
-                        <p class="lead" style="font-size: 16px;"> <a href="mailto:kyan@kbradl.com">kyan@kbradl.com</a> | <a href="tel:0800-461-0980">0800-461-0980</a> | <a href="https://www.google.com/maps/@-36.8486142,174.7625312,616a,35y,290.28h,3.9t/data=!3m1!1e3" target="_blank"> 111 Cul De Sac Road, Auckland Central, New Zealand</a></p>
-                    </li>
-                    <br>
-                    <br>
-                </ul>
-            </div>
-        </div>
-    </nav>
-    <main class="main">
-       
-        <footer class="position-relative text-muted text-center blockquote-footer" style="z-index: 15">
-            <div class="container-fluid" style="background-color: #F2B79F; border-top: 5px solid #EB745F">
-                <div class="container" style="padding: 15px">
-                    <p> <a href="#" class="hyperlink-top">Back to top</a> </p>
-                    <p style="color: white"> © 2021 Milky. All rights reserved. Created by Kyan Bradley </p>
-                </div>
-            </div>
-        </footer>
-    </main>
-</div>
+	});
+	
+	</script>
+
+	<nav class="navbar navbar-light fixed-top" style="z-index: 50; background-color: #FFFFFF; border-bottom-style: solid; border-bottom-color: #494960;" id="changeColor"> <a class="navbar-brand" href="#">Kyan Bradley</a>
+		<button class="navbar-toggler bg-light" type="button" id="navbarButton"> <span class="navbar-toggler-icon"></span> </button>
+	</nav>
+
+	<main class="main">
+		<div id="navContainer" style="z-index: 100;">
+			<div class="container-fluid"  style="position: flex; align-content: flex-start" id="collapsibleNavbar">
+				<ul class="navbar-nav mr-auto">
+					<li class="nav-item nav-trans"> <a class="nav-link lead" href="index.html#about">About Me</a> </li>
+					<li class="lead nav-item nav-trans"> <a class="nav-link" href="index.html#experience">Work Experience</a> </li>
+					<li class="lead nav-item nav-trans"> <a class="nav-link" href="index.html#work">My Work</a> </li>
+					<li><br>
+						<p class="lead" style="font-size: 16px;"> 
+							<a href="mailto:kyan@kbradl.com">kyan@kbradl.com</a> |
+							<a href="tel:+642108696192">+642108696192</a> | 
+							<a href="https://www.linkedin.com/in/kyan-bradley"> LinkedIn </a>|
+							<a href="https://github.com/bradley-kyan"> Github </a>
+						</p>
+					</li>
+					<br>
+					<br>
+				</ul>
+			</div>
+		</div>
+		<br><br>
+
+		<div class="d-flex justify-content-center align-items-center jumbotron">
+			<div class="p-3"><img src="img/IMG20230806171027.jpg" style="width: 400px; border-radius: 100%;"></div>
+			<div class="p-4"></div>
+			<div class="p-3">
+				<h1 class="display-4">
+					<p class="text-center">Kyan Bradley</p>
+				</h1>
+				<p class="lead text-center">
+					<a href="mailto: kyan@kbradl.com">
+					kyan@kbradl.com
+					</a>
+					<br>
+					<a href="tel: +642108696192">
+						+642108696192
+					</a>
+					<br>
+					<p class="lead text-center"><a href="https://www.linkedin.com/in/kyan-bradley">
+						LinkedIn
+					</a>|<a href="https://github.com/bradley-kyan ">
+						Github
+					</a></p>
+
+				</p>
+			</div>
+		</div>
+		
+		<div class="container">
+			<h2 class="text-left" id="about">About Me</h2>
+			<p>Hello there! I'm Kyan Bradley, a passionate and driven university student 
+			pursuing a Bachelor of Computer and Information Science, undertaking a double 
+			major in Software Development and Networks and Cybersecurity.</p>
+			<p>Since a young age I have had a passion for anything tech related, whether that be building computers (and
+				accidentally blowing them up), to tinkering with devices, to programming useless things.</p>
+			<p>If I had to describe myself I would say that I am motivated, have a high attention to detail,
+				adaptable, and always willing to learn new things. I am a team player and enjoy working with others
+				to achieve a common goal.
+			</p>
+			<h2 id="experience">Work Experience</h2>
+			<h6>Starbucks New Zealand</h6>
+			<p>Currently I am employeed as a certified barista for Starbucks NZ. I work in
+			a fast-paced environment in one of the most busy stores in the country - Britomart.
+			I find interacting with customers and connecting with them to be the most rewarding part
+			of my job. It is enjoyable to be able to make someone's day with a simple cup of coffee.
+			</p>
+			<p>Working at Starbucks has helped me to develop time management, communication, task prioritization, 
+			and teamwork skills. I have also developed a strong work ethic and a passion for customer service.
+			</p>
+			<h6>Tegal Henderson</h6>
+			<p>Fresh out of highschool I worked for Tegal in their Henderson factory. I worked as a night
+				shift worker who was responsible for the packaging and production of frozen chicken products.
+				My team every night were responsible for the production of over 5 tons of chichen per night.
+				I felt satisfaction from seeing the sheer quantity of product that came off our line.
+			</p>
+			<p></p>
+	
+			<h2 class="text-left" id="work">My Work</h2>
+			<p>Over the past years I have worked on many different projects which range from programming
+				to electrical engineering. I have a passion for learning and I am always looking for new ways to 
+				solve problems.
+			</p>
+			<h6>Task Flow - AUT (Current 2023)</h6>
+			<p>At the moment I am developing a program with my team for one of my programming courses which would allow for
+				users to automatically manage their schedule and gamify their tasks. The assignment requires teams to follow
+				the Agile methodology and to use the Scrum framework to develop the program. For this project I am acting
+				as the scrum master. It is still in the very early development as we are in the first sprint. 
+				It has helped me develop skills in the following areas:
+				<ul>
+					<li>Scrum framework</li>
+					<li>Agile methodology</li>
+					<li>Team collaboration</li>
+					<li>C# programming</li>
+				</ul>
+			</p>
+			<h6>Checkers - AUT (2023)</h6>
+			<p>One of the most recent projects that I have undertaken was my recent school project for my one of my Software
+				development papers. The project was to create a program of my choosing in Java. The game that I had created had
+				two versions, one using a GUI and the other using a command line interface. The game was a simple checkers game
+				which allowed two players to play against each other.
+			</p>
+			<p>This project required proper design, planning and development techniques. Developing this project helped me to
+				hone skills in the following areas:
+			</p>
+			<ul>
+				<li>Java programming</li>
+				<li>Embedded SQL intergration.</li>
+				<li>Persistant data storage</li>
+				<li>UML design</li>
+				<li>Algorithm design</li>
+				<li>GUI design</li>
+				<li>MVC design</li>
+			</ul>
+
+			<h6>Custom Keyboard Design - 2022 to Present</h6>
+			<p>For the better part of the past couple years as a hobby I have tried to develop custom keyboard from scratch. This 
+				meant designing the PCB and the case. This reqired reading hundreds of pages of documentation and learning 
+				MCU acritecture and design. For the MCU it uses the at90usb646. At the moment the design phase has been completed,
+				but the boards have not been manufactured yet.
+			</p>
+			<h6>Student Registry RFID Management System - Highschool (2021)</h6>
+			<p>In highschool I developed a project for my final year ICT course. This project was to solve the current problem that
+				schools face of wasting time having to take attendence for every class. The solution that I came up with was to use
+				RFID technology to allow students to scan in and out of class. This would allow teachers to see who was in class and
+				who was not.
+				</p>
+				<p>This project won me the 2021 123Tech highschool solo division competition run by IT Professionals NZ.</p>
+				<p>This project was developed using the following technologies and gave me experience in the following areas:
+				<ul>
+					<li>Ardunio boards</li>
+					<li>C++ pogramming</li>
+					<li>C# programming</li>
+					<li>RFID technology</li>
+					<li>SQL database design</li>
+					<li>UML design</li>
+					<li>Network communication</li>
+				</ul>
+			</p>
+			<h6>Milky Website - Highschool (2021)</h6>
+			<p>Before the development of the SRRMS project mentioned above, I was assigned a assignment which required the development of
+				a simple single page website. This website's purpose was to develop skills in CSS and javascript. The website took me less
+				than a week to developed and was a simple website which was designed to be a landing page for a fictional ice cream company
+				called 'Milky.' That project serves as a basis for this current website. This project gave me experience in the following areas:
+				<ul>
+					<li>HTML</li>
+					<li>CSS</li>
+					<li>Javascript</li>
+					<li>jQuery</li>
+					<li>Web animations</li>
+					<li>Bootstrap</li>
+				</ul>
+			</p>
+			<h6>Blind Low Vision Website and Application - Highschool (2020)</h6>
+			<p>This project was a year long assignment design was for students to create application for Blind and Low NZ. The original project
+				only required the development of a website, but I decided to go above and beyond and develop an application as well. The website
+				was designed to be a landing page for the organization and the application was designed to be a tool for the organization to use
+				to manage users attending their events. This project gave me experience in the following areas:
+				<ul>
+					<li>HTML</li>
+					<li>CSS</li>
+					<li>Javascript/jquery</li>
+					<li>PHP</li>
+					<li>Bootstrap</li>
+					<li>SQL</li>
+					<li>UML design</li>
+					<li>C# Programming</li>
+					<li>Xamarin mobile framework</li>
+					<li>Android development</li>
+				</ul>
+			</p>		
+		</div>
+		
+		<footer class="text-muted text-center blockquote-footer position-relative" style="z-index: 15">
+			<div class="container-fluid" style="background-color: #494960; border-top: 5px solid #333345">
+				<div class="container" style="padding: 15px">
+					<p> <a href="#" class="hyperlink-top">Back to top</a> </p>
+					<p style="color: white"> 2023 Created by Kyan Bradley </p>
+				</div>
+			</div>
+		</footer>
+	</main>
 </body>
 </html>
